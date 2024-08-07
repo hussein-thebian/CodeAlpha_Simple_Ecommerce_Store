@@ -1,0 +1,257 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+main {
+    padding: 20px;
+}
+
+p {
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Header */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.0em;
+    font-style: italic;
+    color: #f4f4f4;
+}
+
+/* Cart Icon */
+#cart-icon {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Return to Top Button */
+#return-to-top-btn {
+    display: none; 
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 100%;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+#return-to-top-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Product List */
+#products-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    padding: 10px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.product-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.product-image-wrapper {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.prod-description {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.prod-name {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.prod-price {
+    font-weight: bolder;
+    font-size: 32px;
+}
+
+.add-to-cart-btn {
+    font-size: 18px;
+}
+
+/* Cart Popup */
+#cart-popup {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    width: 600px;
+    max-height: 300px;
+    overflow-y: scroll;
+    background-color: white;
+    border: 2px solid #060505;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000;
+    transform: translateY(-50%);
+}
+
+#cart-popup.hidden {
+    display: none;
+}
+
+#cart-contents {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#checkout-btn {
+    position: absolute;
+    right: 20px;
+    margin-top: 10px;
+}
+
+#close-popup-btn {
+    position: absolute;
+    top: 0px; 
+    right: 10px; 
+    background: none;
+    font-size: 12px;
+    cursor: pointer;
+    color: white;
+    background-color: #007bff;
+    padding: 2px 5px;
+}
+
+/* Cart Content Table */
+#cart-contents table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#cart-contents td,
+#cart-contents th {
+    text-align: center;
+    padding: 8px;
+    font-size: 18px;
+}
+
+#cart-contents p {
+    text-align: center;
+}
+
+.cart-total-price {
+    font-size: 24px;
+}
+
+/* Empty Cart Button */
+#empty-cart-btn {
+    padding: 10px;
+    border: none;
+    background-color: #dc3545;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#empty-cart-btn:hover {
+    background-color: #c82333;
+}
+
+/* Quantity Selector */
+.quantity-selector {
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.quantity-selector button {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    color: #333;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.quantity-selector button:hover {
+    background-color: #e0e0e0;
+}
+
+.quantity-selector input {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #da4141;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+}
